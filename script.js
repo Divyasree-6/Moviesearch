@@ -4,29 +4,26 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
 // Sample movies data with actual movie posters
 const sampleMovies = [
-    // Telugu Movies
     { id: 1, title: 'RRR', genre: 'Action/Drama', year: '2022', rating: 8.0, poster: 'https://image.tmdb.org/t/p/w500/wE0I6efAW4cDDmZQWtwZMOW44EJ.jpg', type: 'movie' },
-    { id: 2, title: 'Baahubali 2', genre: 'Action/Fantasy', year: '2017', rating: 8.2, poster: ''},
+    { id: 2, title: 'Baahubali 2', genre: 'Action/Fantasy', year: '2017', rating: 8.2, poster: 'https://image.tmdb.org/t/p/w500/9HE9xiNmQiVWNsVorinQCFR1SiR.jpg', type: 'movie' },
     { id: 3, title: 'Pushpa', genre: 'Action/Thriller', year: '2021', rating: 7.6, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'movie' },
     { id: 4, title: 'Ala Vaikunthapurramuloo', genre: 'Action/Drama', year: '2020', rating: 7.3, poster: 'https://image.tmdb.org/t/p/w500/6IEJAZlJEKnfHVEqZu8P7OLdLLq.jpg', type: 'movie' },
     { id: 5, title: 'Sarileru Neekevvaru', genre: 'Action/Comedy', year: '2020', rating: 5.8, poster: 'https://image.tmdb.org/t/p/w500/hJBXc0jvZgenK4xvPYqJPCRP0hM.jpg', type: 'movie' },
     { id: 6, title: 'Sita Ramam', genre: 'Romance/Drama', year: '2022', rating: 8.6, poster: 'https://image.tmdb.org/t/p/w500/gL73h4dBxFJlvttD6RLlLbPjQRu.jpg', type: 'movie' },
-    { id: 7, title: 'Eega', genre: 'Fantasy/Thriller', year: '2012', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'movie' },
-    { id: 8, title: 'Arjun Reddy', genre: 'Romance/Drama', year: '2017', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'movie' },
-    { id: 9, title: 'Rangasthalam', genre: 'Action/Drama', year: '2018', rating: 8.2, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'movie' },
-    { id: 10, title: 'Magadheera', genre: 'Action/Fantasy', year: '2009', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'movie' },
+    { id: 7, title: 'Eega', genre: 'Fantasy/Thriller', year: '2012', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w500/lFSSLTlFozwpaGlO31OoUeirBgQ.jpg', type: 'movie' },
+    { id: 8, title: 'Arjun Reddy', genre: 'Romance/Drama', year: '2017', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w500/tUkY2KcwZXs0qLbHPsJPvYZnXdg.jpg', type: 'movie' },
+    { id: 9, title: 'Rangasthalam', genre: 'Action/Drama', year: '2018', rating: 8.2, poster: 'https://image.tmdb.org/t/p/w500/jMJJz7vGCnMUZOVEHbJaAWPLHKS.jpg', type: 'movie' },
+    { id: 10, title: 'Magadheera', genre: 'Action/Fantasy', year: '2009', rating: 7.7, poster: 'https://image.tmdb.org/t/p/w500/xvzwMZdDYqJlLLqYqXqYqYqYqYq.jpg', type: 'movie' },
     { id: 11, title: 'KGF Chapter 2', genre: 'Action/Drama', year: '2022', rating: 8.4, poster: 'https://image.tmdb.org/t/p/w500/xYBaLMqbTUHI1fxIFRWTyX2C6w5.jpg', type: 'movie' },
     { id: 12, title: 'Salaar', genre: 'Action/Thriller', year: '2023', rating: 7.2, poster: 'https://image.tmdb.org/t/p/w500/iqRODLjht9fvXZFXKnJj8KCFWKF.jpg', type: 'movie' },
-    
-    // Web Series
-    { id: 13, title: 'Dhootha', genre: 'Thriller/Mystery', year: '2023', rating: 7.5, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 14, title: 'Kota Factory', genre: 'Drama/Comedy', year: '2023', rating: 9.0, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 15, title: 'Panchayat', genre: 'Comedy/Drama', year: '2023', rating: 8.9, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 16, title: 'Farzi', genre: 'Crime/Thriller', year: '2023', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 17, title: 'Mirzapur', genre: 'Crime/Action', year: '2023', rating: 8.5, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 18, title: 'The Family Man', genre: 'Action/Thriller', year: '2023', rating: 8.7, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 19, title: 'Asur', genre: 'Crime/Thriller', year: '2023', rating: 8.4, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' },
-    { id: 20, title: 'Paatal Lok', genre: 'Crime/Drama', year: '2023', rating: 7.9, poster: 'https://image.tmdb.org/t/p/w500/5TydDLLGm4b5OXWZMZZPhXSZEBr.jpg', type: 'series' }
+    { id: 13, title: 'Dhootha', genre: 'Thriller/Mystery', year: '2023', rating: 7.5, poster: 'https://image.tmdb.org/t/p/w500/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg', type: 'series' },
+    { id: 14, title: 'Kota Factory', genre: 'Drama/Comedy', year: '2023', rating: 9.0, poster: 'https://image.tmdb.org/t/p/w500/yxXAWZJqYgEFaMpJWQody5Yx3Yz.jpg', type: 'series' },
+    { id: 15, title: 'Panchayat', genre: 'Comedy/Drama', year: '2023', rating: 8.9, poster: 'https://image.tmdb.org/t/p/w500/4g41f0lHs0Mzb8TQXL0LdLkJlqL.jpg', type: 'series' },
+    { id: 16, title: 'Farzi', genre: 'Crime/Thriller', year: '2023', rating: 8.1, poster: 'https://image.tmdb.org/t/p/w500/kQKcbDbjnPKZbVJfZ7LZZ7LZZ7L.jpg', type: 'series' },
+    { id: 17, title: 'Mirzapur', genre: 'Crime/Action', year: '2023', rating: 8.5, poster: 'https://image.tmdb.org/t/p/w500/8ZYhuvLvMmW3SNlJFcqgLCnPNYG.jpg', type: 'series' },
+    { id: 18, title: 'The Family Man', genre: 'Action/Thriller', year: '2023', rating: 8.7, poster: 'https://image.tmdb.org/t/p/w500/dMiNDHhPqxvqX8mKJJKKKKKKKKK.jpg', type: 'series' },
+    { id: 19, title: 'Asur', genre: 'Crime/Thriller', year: '2023', rating: 8.4, poster: 'https://image.tmdb.org/t/p/w500/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg', type: 'series' },
+    { id: 20, title: 'Paatal Lok', genre: 'Crime/Drama', year: '2023', rating: 7.9, poster: 'https://image.tmdb.org/t/p/w500/lqoMzCcZYEFK729d6qzt349fB4o.jpg', type: 'series' }
 ];
 
 let currentFilter = 'all';
